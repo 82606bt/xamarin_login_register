@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="xamarinApp.View.Users">
+    <ContentPage.Content>
+      
+        <ScrollView>
+            <AbsoluteLayout Margin="3,3,3,3">
+                <FlexLayout IsVisible="True" JustifyContent="SpaceEvenly" Direction="Column" AlignItems="Start" >
+                    <ListView x:Name="listUser"
+                                  HasUnevenRows="True"
+                                  IsVisible="True">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Margin="2,2,2,2">
+                                        <StackLayout>
+                                            <Label Text="Tên người dùng : " FontSize="12"></Label>
+                                            <Label Text="{Binding userName}" FontAttributes="Bold" TextColor="Black" FontSize="16" />
+                                          
+                                        </StackLayout>
+                                        <StackLayout>
+                                            <Label Text="Tên tài khoản: " FontSize="12"></Label>
+                                            <Label Text="{Binding name}" FontSize="12"/>
+                                        </StackLayout>
+                                        <StackLayout>
+                                            <Label Text="Email: " FontSize="12"></Label>
+                                            <Label Text="{Binding email}" FontSize="12"/>
+                                        </StackLayout>
+                                        <StackLayout>
+                                            <Label Text="Số điện thoại: " FontSize="12"></Label>
+                                            <Label Text="{Binding phone}" FontSize="12"/>
+                                        </StackLayout>
+                                        <Button Clicked="OnDelete" CommandParameter="{Binding .}" Text="Xóa"/>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </FlexLayout>
+            </AbsoluteLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

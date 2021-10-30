@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:xamarinApp"
+             
+             x:Class="xamarinApp.View.Register">
+    <StackLayout Padding="0" BackgroundColor="LightGray">
+        <Grid>
+            <StackLayout>
+                <Frame BackgroundColor="LightBlue"  HeightRequest="160" HorizontalOptions="FillAndExpand" Padding="0">
+                    <Image Source="Banner.png" Aspect="AspectFill" Margin="0"/>
+                </Frame>
+            </StackLayout>
+            <ScrollView>
+            <StackLayout Margin="15,110,15,0">
+                <Frame BackgroundColor="White" HasShadow="True" HeightRequest="600" HorizontalOptions="FillAndExpand">
+                    <StackLayout>
+                        <StackLayout HorizontalOptions="CenterAndExpand">
+                            <Label Text="ĐĂNG KÝ" TextColor="Black" FontSize="Medium"  FontAttributes="Bold"/>
+                        </StackLayout>
+
+                        <StackLayout Margin="0,26,0,0">
+                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" Margin="0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+                                <StackLayout Orientation="Horizontal">
+                                    <Frame BackgroundColor="AliceBlue" CornerRadius="50" HeightRequest="35" WidthRequest="35"  HorizontalOptions="Start" Padding="0" Margin="7">
+                                        <Image Source="https://img1.pnghut.com/3/21/23/6SJeHwvNus/mobile-phones-android-brand-computer-software-blue.jpg" Aspect="AspectFill" Margin="0"/>
+
+                                    </Frame>
+
+                                        <Entry  x:Name="emailEntry" ReturnType="Next" Placeholder="Tên đăng nhập" TextColor="Black" HorizontalOptions="FillAndExpand" Margin="0,0,15,0">
+                                            <!--<Entry.Behaviors>
+                                                <local:EmailValidationBehavior></local:EmailValidationBehavior>
+                                            </Entry.Behaviors>-->
+
+                                        </Entry>
+
+                                    </StackLayout>
+                            </Frame>
+                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" Margin="0,20,0,0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+                                <StackLayout Orientation="Horizontal">
+                                    <Frame BackgroundColor="AliceBlue" CornerRadius="50" HeightRequest="35" WidthRequest="35"  HorizontalOptions="Start" Padding="0" Margin="7">
+                                            <Image Source="https://cdn-icons-png.flaticon.com/512/1804/1804429.png" Aspect="AspectFill" Margin="0"/>
+                                        </Frame>
+
+                                        <Entry x:Name="passwordEntry" ReturnType="Next" Placeholder="Mật khẩu" IsPassword="True"  TextColor="Black" HorizontalOptions="FillAndExpand" Margin="0,0,15,0"/>
+
+
+                                </StackLayout>
+                            </Frame>
+                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" Margin="0,20,0,0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+                                <StackLayout Orientation="Horizontal">
+                                    <Frame BackgroundColor="AliceBlue" CornerRadius="50" HeightRequest="35" WidthRequest="35"  HorizontalOptions="Start" Padding="0" Margin="7">
+                                            <Image Source="https://cdn-icons-png.flaticon.com/512/1804/1804429.png" Aspect="AspectFill" Margin="0"/>
+                                     </Frame>
+
+                                        <Entry x:Name="confirmpasswordEntry" ReturnType="Next" Placeholder="Xác nhận mật khẩu" IsPassword="True"  TextColor="Black" HorizontalOptions="FillAndExpand" Margin="0,0,15,0"/>
+                                        <Label x:Name="warningLabel" Text="" IsVisible="False" TextColor="Blue" FontSize="15" BackgroundColor="Transparent" FlexLayout.AlignSelf="End"/>
+                                    </StackLayout>
+                            </Frame>
+                            
+                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" Margin="0,20,0,0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+                                <StackLayout Orientation="Horizontal">
+                                    <Frame  CornerRadius="50" HeightRequest="35" WidthRequest="35"  HorizontalOptions="Start" Padding="0" Margin="7">
+                                            <Image Source="https://static.thenounproject.com/png/1946973-200.png" Aspect="AspectFill" Margin="0"/>
+                                        </Frame>
+
+                                        <Entry x:Name="userNameEntry" ReturnType="Next"  Placeholder="Tên người dùng" TextColor="Black" HorizontalOptions="FillAndExpand" Margin="0,0,15,0"/>
+                                </StackLayout>
+                            </Frame>
+                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" Margin="0,20,0,0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+                                <StackLayout Orientation="Horizontal">
+                                    <Frame  CornerRadius="50" HeightRequest="35" WidthRequest="35"  HorizontalOptions="Start" Padding="0" Margin="7">
+                                            <Image Source="https://www.iconpacks.net/icons/1/free-mail-icon-1008-thumb.png" Aspect="AspectFill" Margin="0"/>
+                                          
+                                        </Frame>
+
+                                        <Entry  x:Name="Emailentry" ReturnType="Next"  Placeholder="Email" TextColor="Black" HorizontalOptions="FillAndExpand" Margin="0,0,15,0"/>
+                                </StackLayout>
+                            </Frame>
+                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" Margin="0,20,0,0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+                                <StackLayout Orientation="Horizontal">
+                                    <Frame CornerRadius="50" HeightRequest="35" WidthRequest="35"  HorizontalOptions="Start" Padding="0" Margin="7">
+                                            <Image Source="https://cityweb.vn/wp-content/uploads/2021/03/phone-icon-on-green-button-eps-10-vector-26438035.jpg" Aspect="AspectFill" Margin="0"/>
+                                         
+                                        </Frame>
+
+                                        <Entry  x:Name="phoneEntry"  ReturnType="Done" Placeholder="Điện Thoại" TextColor="Black" HorizontalOptions="FillAndExpand" Margin="0,0,15,0">
+                                            <!--<Entry.Behaviors>
+                                                <local:NumberValidationBehavior></local:NumberValidationBehavior>
+                                            </Entry.Behaviors>-->
+                                        </Entry>
+                                        <Label x:Name="phoneWarLabel" Text="" IsVisible="False" TextColor="Blue" FontSize="15" BackgroundColor="Transparent" FlexLayout.AlignSelf="End"/>
+                                 </StackLayout>
+                                
+                            </Frame>
+
+                        </StackLayout>
+
+                            <Button Text="ĐĂNG KÝ" Background="#007acc" Margin="0,20,0,0" TextColor="White" FontAttributes="Bold" CornerRadius="30" Clicked="btn_Register"/>
+
+                        <StackLayout Orientation="Horizontal"  HorizontalOptions="Center" >
+
+                            <Label Text="Bạn đã có tài khoản ?" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+
+                                <Button Text="Đăng nhập" TextColor="LightCoral"   FontAttributes="Bold" BackgroundColor="White" Clicked="btn_Login"/>
+
+                        </StackLayout>
+
+                    </StackLayout>
+
+
+
+                </Frame>
+            </StackLayout>
+            </ScrollView>
+        </Grid>
+    </StackLayout>
+</ContentPage>

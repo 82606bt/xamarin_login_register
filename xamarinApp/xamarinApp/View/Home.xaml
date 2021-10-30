@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="xamarinApp.View.Home">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Đăng xuất"  Priority="1" Clicked="MenuItem_OnClicked"/>
+      
+    </ContentPage.ToolbarItems>
+    <Frame BackgroundColor="LightBlue"  HeightRequest="160"  HorizontalOptions="FillAndExpand" Padding="0">
+        <Image Source="Banner.png" Aspect="AspectFill" Margin="0"/>
+    </Frame>
+</ContentPage>
